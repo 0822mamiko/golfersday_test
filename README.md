@@ -19,11 +19,14 @@
   import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
   const firebaseConfig = {
-    apiKey: "ここにコピーした値",
-    authDomain: "ここにコピーした値",
-    projectId: "ここにコピーした値"
-  };
-
+  apiKey: "AIzaSyDE90HZYC-tTpqVUgU864-c41LiYtIysoQ",
+  authDomain: "golfers-day.firebaseapp.com",
+  projectId: "golfers-day",
+  storageBucket: "golfers-day.firebasestorage.app",
+  messagingSenderId: "832189820048",
+  appId: "1:832189820048:web:9d7feb5c11394026ee3c15",
+  measurementId: "G-W3JB6V2ZGF"
+};
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
