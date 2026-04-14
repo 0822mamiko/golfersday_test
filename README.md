@@ -18,9 +18,10 @@
 
 <script>
 const firebaseConfig = {
-  apiKey: "ここにFirebaseの値",
-  authDomain: "ここにFirebaseの値"
-};
+  apiKey: "コピーしたやつ",
+  authDomain: "コピーしたやつ",
+  projectId: "コピーしたやつ"
+};  
 
 firebase.initializeApp(firebaseConfig);
 
