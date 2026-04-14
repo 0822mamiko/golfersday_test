@@ -13,30 +13,32 @@
 
 <button onclick="login()">ログイン</button>
 
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<script type="module">
+  // Firebase最新の書き方
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-<script>
-const firebaseConfig = {
-  apiKey: "ここにコピーした値",
-  authDomain: "ここにコピーした値",
-  projectId: "ここにコピーした値"
-};
+  const firebaseConfig = {
+    apiKey: "ここにコピーした値",
+    authDomain: "ここにコピーした値",
+    projectId: "ここにコピーした値"
+  };
 
-firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
 
-function login() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  window.login = function () {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(() => {
-      alert("ログイン成功！");
-    })
-    .catch(error => {
-      alert(error.message);
-    });
-}
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        alert("ログイン成功！");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
 </script>
 
 </body>
