@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -17,10 +18,10 @@
 
 <script>
 const firebaseConfig = {
-  apiKey: "コピーしたやつ",
-  authDomain: "コピーしたやつ",
-  projectId: "コピーしたやつ"
-};  
+  apiKey: "ここにコピーした値",
+  authDomain: "ここにコピーした値",
+  projectId: "ここにコピーした値"
+};
 
 firebase.initializeApp(firebaseConfig);
 
